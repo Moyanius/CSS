@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    padding: 40px;
+}
+
+#cajas{
+    max-width: 1035px;
+    border: 1px solid black;
+}
+.caja{
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    border: 5px solid red;
+    margin: 15px;
+    padding: 20px;
+    float: left;
+}
+
+p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 235px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+/*
+En este apartado podemos ver el diseño de las cajas::after
+
+tamaño = width y height
+margenes exteriores = margin
+margenes interiores = padding
+
+display = para que se comporten como caja deben de ser block (de bloques) ya que si no actuarian como textos o lineas y no funcionarian bien sus propiedades
+alinear cajas = float left las mueves y las dejas alineadas y se ponen a la izquierda
+
+Para la limpieza de flotados en clearfin le decimos que ningun flotado y que me limpie todo lo anterior, por ejemplo en las cajas tambien lo hemos utilizado despues de la novena
+*/

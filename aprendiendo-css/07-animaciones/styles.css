@@ -1,0 +1,54 @@
+#boton{
+    display: block;
+    padding: 20px;
+    background-color:green ;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 1s;
+}
+
+#boton:hover{
+    border-radius: 15px;
+    background-color: red;
+}
+
+#caja{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background: lightseagreen;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    animation-name: desplazamiento;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes desplazamiento {
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    50%{
+        margin-left: 1200px;
+        transform: rotate(360deg);
+    }  
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }  
+}
+/*
+TRANSICIONES
+Por ejemplo en el boton podemos hacer una transcion al hover al detalle de los aspectos que queramos de all, solo de una parte, el tiempo...
+
+ANIMACIONES
+Las animaciones se hacen de manera infinita o por un elemento pero no como con el hover, es mas complejo que las transciciones.
+Se utilizan los animation y el @keyframe

@@ -1,0 +1,98 @@
+/*  #########SELECTORES##########  */
+
+/* Selector Universal a todo el HTML */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Selector de Etiqueta */
+h1{
+    background: rgb(135, 132, 132);
+    color: aliceblue;
+    padding: 10px;
+}
+a{
+    font-size: 18px;
+    color: rgb(0, 195, 255);
+    text-decoration: none;
+}
+footer a{
+    color: blue;
+}
+
+/* Selector de id */
+#descripcion, #titulo{
+    border: 1px solid black;
+    padding: 15px;
+}
+#titulo{
+    color: green;
+    border: 2px dashed white;
+}
+#usuario form{
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+#usuario form *{
+    display: block;
+}
+/* Selector de clase */
+.parrafo{
+    font-style: italic;
+    /*text-decoration: underline; lo he comentado para que no aparezca*/
+    font-weight: bold;
+}
+.parrafo1, .parrafo2{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+.parrafo2{
+    background: none;
+    color: black;
+}
+/* Selector de atributo */
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 300px;
+}
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+/* Selector de hijo */
+#menu > li > a{
+    font-size: 18px;
+    color: rgb(255, 0, 255);
+    text-decoration: none;
+}
+
+/* Prioridad y especificidad*/
+
+#saludo h1{
+    background-color: brown;
+}
+h1{
+    background-color: purple !important;
+}
+
+/*Todo se lee de arriba abajo es decir en el caso de h1 como titulo esta por debajo me pone las letras en verdad ya que machaca la orden de arriba y se queda con la que este mas abajo
+
+Tambien se pueden poner varios selector para un diseño como vemos en la linea 24,25
+
+Los id no se pueden repetir para ello utilizariamos las clases como en la linea 36 y se pueden juntar varias clases juntas y siempre mandaria en caso de conflicto la de mas abajo
+
+Los selectores de atributos seleccionan todos los input de los atributos seleccionados linean 56-69
+
+Los selectores hijo eleccionan a quien va a afecta, lo siguiente puesto en la linea 71 te dice a lo siguiente a menu a li y a a siguiente(enlace), despues lo siguiente de a nada 
+
+
+la prioridad dice que la ultima especificacion es la que predomina pero existe la regla de que la que mas especifique es la que predomina como en el caso de la linea 80 que sigue pintando marron, solo en el caso de incluir el !important, no predominaria el color morado*/

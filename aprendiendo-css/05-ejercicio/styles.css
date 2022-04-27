@@ -1,0 +1,182 @@
+/*
+EJERCICIO COMPLETO CON HTML Y CSS
+
+ok 1.Crear documento HTML y vincularlo con CSS
+ok 2.Crear estructura HTML que cuente con un 
+    ok CONTENEDOR GENERAL
+    ok HEADER
+    ok MENU
+    ok BARRA LATERAL
+    ok SECCION DE CONTENIDO PRINCIPAL
+    ok ELEMENTOS DENTRO DEL CONTENEDOR      PRINCIPAL
+    ok FOOTER
+ok 3.Todo el contenido debe de estar dentro del contenedor general y su ancho sera de 1200px y estar centrado
+ok 4.Header debe de ocupar el 100% del ancho y tener un texto grande centrado.
+ok 5.menu debe de tener los elementos uno al lado de otro
+ok 6.El contenido principal debe de tener un ancho del 70%
+ok 7.El contenido dentro del contenedor principal debe ser una cuadricula con 4 lineas de 2 cajas.
+ok 8.La barra lateral debe de tener un ancho del 30%
+9.El footer debe de tener un ancho del 100% del div que lo contiene y estar debajo del todo.
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#general {
+  max-width: 1200px;
+  margin: 0px auto;
+  margin-top: 20px;
+  border: 1px solid grey;
+}
+
+#header {
+  max-width: 100%;
+  height: 100px;
+  background: rgb(54, 142, 237);
+  color: white;
+  text-align: center;
+  line-height: 90px;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+#menu {
+  background: #eee;
+}
+
+#menu ul li {
+  /* display: inline-block;*/
+  display: block;
+  float: left;
+
+  border-right: 1px solid #ccc;
+}
+
+#menu ul li a {
+  color: #444;
+  display: block;
+  padding: 15px;
+}
+
+#menu ul li :hover {
+  background: rgb(10, 101, 157);
+  cursor: pointer;
+}
+
+#menu ul li:hover a {
+  color: white;
+}
+
+#contenido {
+  float: left;
+  width: 69%;
+}
+
+#lateral {
+  float: left;
+  width: 30%;
+  border: 1px solid red;
+  min-height: 500px;
+  max-height: 650px;
+  text-align: center;
+  overflow: scroll;
+}
+#contenido > h1 {
+  text-align: center;
+  border-bottom: 2px solid green;
+  padding: 15px;
+  color: #444;
+  text-shadow: 1px 1px 2px grey;
+}
+#contenido .caja {
+  position: relative;
+  width: 40%;
+  height: 250px;
+  background: #ccc;
+  border: 1px solid grey;
+  color: white;
+  float: left;
+  margin: 20px;
+  margin-left: 40px;
+  text-align: center;
+  line-height: 200px;
+  color: #444;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 15px grey;
+  border-radius: 15px;
+}
+
+.sombra-interior {
+  box-shadow: 0px 0px 15px grey inset !important;
+  border-radius: 50px 15px 0px 100px !important;
+}
+#footer {
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background: #eee;
+  text-align: center;
+  color: #444;
+  border-top: 1px solid #ccc;
+}
+.libre {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+
+  border: 1px solid black;
+  background: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.libre2 {
+  position: absolute;
+  top: 290px;
+  left: 50%;
+
+  background: greenyellow;
+  border: 1px solid black;
+  z-index: 3;
+}
+
+.fija {
+  position: fixed;
+  top: 50%;
+  left: 150px;
+
+  border: 1px solid black;
+  background: rgb(72, 8, 222);
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+  z-index: 23;
+}
+
+/*
+OVERFLOW
+en la seccion lateral le hemos añadido la caracteristica overflow que es para limitar el texto de la caja segun queramos, maximo texto, texto con scrool...
+
+BORDES REDONDOS
+en la seccion de cajas podemos ver los diferentes redondeados de las esquinas si la caja es completamente cuadrada la podemos convertir hasta un circulo
+
+SOMBREADOS
+el el conenido h1 vemos como hemos aplicado el sombreado
+
+POSICIONAMIENTO ABSOLUTO
+-Position Relative es la que se aplica por defecto
+-Position Absolute en la caja libre vemos que con la position absolute podemos moverla por donde sea, ya que estaria en una capa superior a todo el estructurado.
+    Para posicionar unas capas delantes de otras utilizamos el z-index ( a mayor numero mas arriba)
+-Position Fixed es siempre fija y acompaña a scroll.
+*/

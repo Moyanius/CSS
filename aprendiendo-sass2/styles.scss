@@ -1,0 +1,22 @@
+//Variables
+$color-principal: #ccc;
+$color-letraprincipal: green;
+
+body{
+    background: $color-principal ;
+}
+
+h1{
+    color: $color-letraprincipal;
+}
+.caja{
+    h2{
+        font-size: 60px;
+        color: rgb(150, 26, 47);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    p{
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+}
